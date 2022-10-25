@@ -1,14 +1,6 @@
-function q_hl = ikine_hl(pstar_hl, r, x , y, z)
+function q_hl = ikine_hr(pstar_hl, r, x , y, z)
 
-%     Bhl = [r,[x; y; z];0 0 0 1]*[rotz(90)*rotx(90), [0.1805; 0.047; 0]; [0 0 0 1] ];
-
-%     Bhl = [r,[x; y; 0];0 0 0 1]*[rotz(90)*rotx(90), [0.1805; 0.047; 0]; [0 0 0 1] ];
-
-    Bhl = [r*rotz(90)*rotx(90), [0.1805; 0.047; 0]; [0 0 0 1] ];
-
-%     Bhl = [rotz(90)*rotx(90), [0.1805; 0.047; 0]; [0 0 0 1] ];
-
-%     Bhl = [roty(0)*rotz(0)*rotx(0),[x; y; z];0 0 0 1]*[rotz(90)*rotx(90), [0.1805; 0.047; 0]; [0 0 0 1] ];
+    Bhl = [r,[x; y; z];0 0 0 1]*[rotz(90)*rotx(90), [0.1805; 0.047; 0]; [0 0 0 1] ];
     
     linkshl(1) = Link([    0   0   0       -pi/2 ]);
     linkshl(2) = Link([    0   0.0838   0.2 0   ]);

@@ -35,31 +35,7 @@ legbl = SerialLink(linksbl, 'name', 'legbl', 'offset', [-pi/2   0  0], 'base', B
 % now create a robot to represent a single leg
 legbr = SerialLink(linksbr, 'name', 'legbr', 'offset', [-pi/2   0  0], 'base', Bbr);
 
-
-% DATE SIMULINK 
-Kwalk = 1;
-tWalk = 0.3;
-tc = 0.04; %timpul in care articulatiile ajung in punctul dorit Simulink
-
-h = 0.25;
-g = 9.80665;
-stepHeight = 0.03;
-
-% Contact Froces 
-damp = 1e6;
-stiff = 1e6;
-
-% Path
-pathT = [0 2 15 30 45 60]';
-pathX = [0 0.01 1 1 0 0]';
-pathY = [0 0.01 0 1 1 0]';
-curveT = linspace(0,pathT(end),100)';
-curveX = interp1(pathT,pathX,curveT);
-curveY = interp1(pathT,pathY,curveT);
-curveZ = zeros(size(curveT));
-interPts = [curveX curveY curveZ];
-TsCtrl = 0.1;
-
+tc = 0.1; %timpul in care articulatiile ajung in punctul dorit Simulink
 
 q1 = 0;
 q2 = 0;
@@ -68,25 +44,25 @@ q3 = 0;
 qz = [0 0 0];
 q90 = [pi/2 pi/2 pi/2];
 
-x_hr = 0.025+0.1805;
+x_hr = 0.3;
 y_hr = -0.0838-0.047;
 z_hr = -0.25;
 
 pstar_hr = [x_hr; y_hr; z_hr]
 
-x_hl = 0.025+0.1805;
+x_hl = 0.3;
 y_hl = 0.0838+0.047;
 z_hl = -0.25;
 
 pstar_hl = [x_hl; y_hl; z_hl]
 
-x_br = 0.025 - 0.1805;
+x_br = -0.25;
 y_br = -0.0838-0.047;
 z_br = -0.25;
 
 pstar_br = [x_br; y_br; z_br]
 
-x_bl = 0.025 - 0.1805;
+x_bl = -0.25;
 y_bl = 0.0838+0.047;
 z_bl = -0.25;
 
@@ -113,13 +89,13 @@ qsyms = [q1 q2 q3];
 
 f = @ (qsyms) norm(mun4dof.fkine(qsyms).t - pstar_hr);
 
-q_hr = fmincon( @(qsyms) norm(leghr.fkine(qsyms).t - pstar_hr), qz,A,b,Aeq,beq,lb_r,ub_r)
+q_hr = fmincon( @(qsyms) norm(leghr.fkine(qsyms).t - pstar_hr), qz,A,b,Aeq,beq,lb_r,ub_r);
 
-q_hl = fmincon( @(qsyms) norm(leghl.fkine(qsyms).t - pstar_hl), qz,A,b,Aeq,beq,lb_l,ub_l)
+q_hl = fmincon( @(qsyms) norm(leghl.fkine(qsyms).t - pstar_hl), qz,A,b,Aeq,beq,lb_l,ub_l);
 
-q_br = fmincon( @(qsyms) norm(legbr.fkine(qsyms).t - pstar_br), qz,A,b,Aeq,beq,lb_r,ub_r)
+q_br = fmincon( @(qsyms) norm(legbr.fkine(qsyms).t - pstar_br), qz,A,b,Aeq,beq,lb_r,ub_r);
 
-q_bl = fmincon( @(qsyms) norm(legbl.fkine(qsyms).t - pstar_bl), qz,A,b,Aeq,beq,lb_l,ub_l)
+q_bl = fmincon( @(qsyms) norm(legbl.fkine(qsyms).t - pstar_bl), qz,A,b,Aeq,beq,lb_l,ub_l);
 
 
 % leghr.plot(lb_r, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
@@ -127,28 +103,22 @@ q_bl = fmincon( @(qsyms) norm(legbl.fkine(qsyms).t - pstar_bl), qz,A,b,Aeq,beq,l
 % leghl.plot(lb_l, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
 % legbr.plot(lb_r, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
 % legbl.plot(lb_l, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
-
-% % figure
-  
-% % leghr.plot(ub_r, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
-% % hold on
-% % leghl.plot(ub_l, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
-% % legbr.plot(ub_r, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
-% % legbl.plot(ub_l, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
 % 
+% figure
 % 
+% leghr.plot(ub_r, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
 % hold on
-% 
-% leghr.plot(q_hr, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
-% leghl.plot(q_hl, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
-% legbr.plot(q_br, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
-% legbl.plot(q_bl, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
+% leghl.plot(ub_l, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
+% legbr.plot(ub_r, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
+% legbl.plot(ub_l, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
+
 
 hold on
-leghr.plot(qz, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
-leghl.plot(qz, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
-legbr.plot(qz, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
-legbl.plot(qz, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
+
+leghr.plot(q_hr, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
+leghl.plot(q_hr, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
+legbr.plot(q_br, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
+legbl.plot(q_bl, 'workspace', [-0.5 0.5 -0.5 0.5 -0.5 0.5]);
 
 
 
