@@ -6,6 +6,7 @@
   2. Metoda implemetata permite controlul picioarelor si a corpului(se poate modifica orientarea si translatia acestuia).
   3. In cazul in care solutia este NaN sau inf. inseamna ca punctul care se dorete sa fie accesat nu este in sptiul de lucru al robotului.
   4. Aceasta problema mai poate fi imbunatatita prin eliminarea functiilor arcsin, arctg, etc.
+  5. Nu am atasat rezolvare deoarece trebuie sa o rescriu dar este implementarea facuta in code.
  
 ![image](https://user-images.githubusercontent.com/57198584/228883457-657abb35-62ce-4050-9b4a-d36c7c0297be.png)
 
@@ -13,6 +14,8 @@
 
   1. Centru de masa al robotului este variabil in functie de configuratia acestuia.
   2. In programul "com.m" se calculaza centru de masa total al robotului pe baza pozitilor centrelor de masa ale fiecarui link in parte.
+  3. ![image](https://user-images.githubusercontent.com/57198584/228894422-2b0a7a57-1557-4281-af61-15a92b51e419.png)
+
   
 ![image](https://user-images.githubusercontent.com/57198584/228879991-6a41d36e-7d6f-4ca4-8d14-99e9cdf82a98.png)
 
