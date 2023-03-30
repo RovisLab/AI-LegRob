@@ -17,7 +17,7 @@ https://user-images.githubusercontent.com/57198584/228896209-083498dc-f889-4cc0-
 ![image](https://user-images.githubusercontent.com/57198584/228894422-2b0a7a57-1557-4281-af61-15a92b51e419.png)
   3. Asterixul de culoare albastra reprezinta centru de masa total ar robotului   
 
-![image](https://user-images.githubusercontent.com/57198584/228898608-6847385b-01c3-4da1-8e37-820bec1278cd.png)
+![image](https://user-images.githubusercontent.com/57198584/228899073-139a489f-bd7e-4807-a819-609281e880bc.png)
 
 
 
