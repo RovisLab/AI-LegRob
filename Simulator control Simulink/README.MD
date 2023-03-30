@@ -2,7 +2,7 @@
 
 ## Static Gait:
   
-  Robotul se deplaseasa de alungul unei traiectorii(o linie dreapta). Logica de coltrol este urmatoarea:
+  Robotul se deplaseasa de alungul unei traiectori(o linie dreapta). Logica de coltrol este urmatoarea:
   
   1. se calculeaza eroarea dintre centru corpului si primul punct din traiectorie
   2. cu ajutorul ZMP(zero moment point) se calculeaza care este pozitia picioarelor astfel incat robotul sa ramana stabil(in programul Simulink a fost implementata doar o mica parte din ZMP)
