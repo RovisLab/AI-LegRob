@@ -8,7 +8,7 @@
   4. Aceasta problema mai poate fi imbunatatita prin eliminarea functiilor arcsin, arctg, etc.
   5. Nu am atasat rezolvare deoarece trebuie sa o rescriu.
 
-https://user-images.githubusercontent.com/57198584/228896209-083498dc-f889-4cc0-9bc6-8e309b814f82.mp4
+https://user-images.githubusercontent.com/57198584/228921091-ec6571f6-fec8-480c-98bc-35a529a22b9c.mp4
 
 ## Center of Mass:
 
