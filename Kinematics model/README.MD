@@ -14,10 +14,10 @@ https://user-images.githubusercontent.com/57198584/228896209-083498dc-f889-4cc0-
 
   1. Centru de masa al robotului este variabil in functie de configuratia acestuia.
   2. In programul "com.m" se calculaza centru de masa total al robotului pe baza pozitilor centrelor de masa ale fiecarui link in parte.
-                  ![image](https://user-images.githubusercontent.com/57198584/228894422-2b0a7a57-1557-4281-af61-15a92b51e419.png)
+![image](https://user-images.githubusercontent.com/57198584/228894422-2b0a7a57-1557-4281-af61-15a92b51e419.png)
   3. Asterixul de culoare albastra reprezinta centru de masa total ar robotului   
 
-                    ![image](https://user-images.githubusercontent.com/57198584/228898608-6847385b-01c3-4da1-8e37-820bec1278cd.png)
+![image](https://user-images.githubusercontent.com/57198584/228898608-6847385b-01c3-4da1-8e37-820bec1278cd.png)
 
 
 
