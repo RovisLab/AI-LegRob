@@ -86,7 +86,7 @@ z_hr = -0.247402;
 %pstar_hr = [x_hr; y_hr; z_hr];
 pstar_hr = [x_hr; y_hr; z_hr];
 
-plot3(x_hr, y_hr, z_hr, '*r','MarkerSize',32)
+%plot3(x_hr, y_hr, z_hr, '*r','MarkerSize',32)
 hold on
 
 x_hl = 0.155677;
@@ -96,7 +96,7 @@ z_hl = -0.247402;
 pstar_hl = [x_hl; y_hl; z_hl];
 %pstar_hl = [0.254607, 0.130800, -0.273078];
 
-plot3(x_hl, y_hl, z_hl, '*r','MarkerSize',12)
+%plot3(x_hl, y_hl, z_hl, '*r','MarkerSize',12)
 hold on
 
 x_br = -0.205323 ;
@@ -113,7 +113,7 @@ z_bl = -0.247402;
 %pstar_bl = [x_bl; y_bl; z_bl];
 pstar_bl = [x_bl; y_bl; z_bl];
 
-plot3(x_bl, y_bl, z_bl, '*r','MarkerSize',32)
+%plot3(x_bl, y_bl, z_bl, '*r','MarkerSize',32)
 
 q_fr = ikine_fr_f(pstar_hr, Tx, Ty, Tz, Rx, Ry, Rz)
 q_fl = ikine_fl_f(pstar_hl, Tx, Ty, Tz, Rx, Ry, Rz)
@@ -165,7 +165,7 @@ linkshr_com_c1(2) = Link([    0   -0.04   0 0   ]);
 
 leghr_com_c1 = SerialLink(linkshr_com_c1, 'name', 'leghr_com_c1', 'offset', [0   0  0], 'base', Bhr);
 M_hr_com_c1 = leghr_com_c1.fkine(q_fr(1:2));
-plot3(M_hr_com_c1.t(1), M_hr_com_c1.t(2), M_hr_com_c1.t(3), '*g','MarkerSize',34)
+%plot3(M_hr_com_c1.t(1), M_hr_com_c1.t(2), M_hr_com_c1.t(3), '*g','MarkerSize',34)
 
 
 linkshr_com_c2(1) = Link([    0   0   0       -pi/2 ]);
@@ -173,7 +173,7 @@ linkshr_com_c2(2) = Link([    0   -0.0838   0.08 0   ]);
 
 leghr_com_c2 = SerialLink(linkshr_com_c2, 'name', 'leghr_com_c2', 'offset', [0   0  0], 'base', Bhr);
 M_hr_com_c2 = leghr_com_c2.fkine(q_fr(1:2));
-plot3(M_hr_com_c2.t(1), M_hr_com_c2.t(2), M_hr_com_c2.t(3), '*g','MarkerSize',34)
+%plot3(M_hr_com_c2.t(1), M_hr_com_c2.t(2), M_hr_com_c2.t(3), '*g','MarkerSize',34)
 
 linkshr_com_c3(1) = Link([    0   0   0       -pi/2 ]);
 linkshr_com_c3(2) = Link([    0   -0.0838   0.2 0   ]);
@@ -181,7 +181,7 @@ linkshr_com_c3(3) = Link([    0   0   0.1   0   ]);
 
 leghr_com_c3 = SerialLink(linkshr_com_c3, 'name', 'leghr_com_c3', 'offset', [0   0  0], 'base', Bhr);
 M_hr_com_c3 = leghr_com_c3.fkine(q_fr);
-plot3(M_hr_com_c3.t(1), M_hr_com_c3.t(2), M_hr_com_c3.t(3), '*g','MarkerSize',34)
+%plot3(M_hr_com_c3.t(1), M_hr_com_c3.t(2), M_hr_com_c3.t(3), '*g','MarkerSize',34)
 
 %% HL
 
@@ -190,7 +190,7 @@ linkshl_com_c1(2) = Link([    0   0.04   0 0   ]);
 
 leghl_com_c1 = SerialLink(linkshl_com_c1, 'name', 'leghl_com_c1', 'offset', [0  0  0], 'base', Bhl);
 M_hl_com_c1 = leghl_com_c1.fkine(q_fl(1:2));
-plot3(M_hl_com_c1.t(1), M_hl_com_c1.t(2), M_hl_com_c1.t(3), '*g','MarkerSize',34)
+%plot3(M_hl_com_c1.t(1), M_hl_com_c1.t(2), M_hl_com_c1.t(3), '*g','MarkerSize',34)
 
 
 linkshl_com_c2(1) = Link([    0   0   0       -pi/2 ]);
@@ -198,7 +198,7 @@ linkshl_com_c2(2) = Link([    0   0.0838   0.08 0   ]);
 
 leghl_com_c2 = SerialLink(linkshl_com_c2, 'name', 'leghl_com_c2', 'offset', [0   0  0], 'base', Bhl);
 M_hl_com_c2 = leghl_com_c2.fkine(q_fl(1:2));
-plot3(M_hl_com_c2.t(1), M_hl_com_c2.t(2), M_hl_com_c2.t(3), '*g','MarkerSize',34)
+%plot3(M_hl_com_c2.t(1), M_hl_com_c2.t(2), M_hl_com_c2.t(3), '*g','MarkerSize',34)
 
 linkshl_com_c3(1) = Link([    0   0   0       -pi/2 ]);
 linkshl_com_c3(2) = Link([    0   0.0838   0.2 0   ]);
@@ -206,7 +206,7 @@ linkshl_com_c3(3) = Link([    0   0   0.1   0   ]);
 
 leghl_com_c3 = SerialLink(linkshl_com_c3, 'name', 'leghl_com_c3', 'offset', [0   0  0], 'base', Bhl);
 M_hl_com_c3 = leghl_com_c3.fkine(q_fl);
-plot3(M_hl_com_c3.t(1), M_hl_com_c3.t(2), M_hl_com_c3.t(3), '*g','MarkerSize',34)
+%plot3(M_hl_com_c3.t(1), M_hl_com_c3.t(2), M_hl_com_c3.t(3), '*g','MarkerSize',34)
 
 %% br
 
@@ -215,7 +215,7 @@ linksbr_com_c1(2) = Link([    0   -0.04   0 0   ]);
 
 legbr_com_c1 = SerialLink(linksbr_com_c1, 'name', 'legbr_com_c1', 'offset', [0   0  0], 'base', Bbr);
 M_br_com_c1 = legbr_com_c1.fkine(q_rr(1:2));
-plot3(M_br_com_c1.t(1), M_br_com_c1.t(2), M_br_com_c1.t(3), '*g','MarkerSize',34)
+%plot3(M_br_com_c1.t(1), M_br_com_c1.t(2), M_br_com_c1.t(3), '*g','MarkerSize',34)
 
 
 linksbr_com_c2(1) = Link([    0   0   0       -pi/2 ]);
@@ -223,7 +223,7 @@ linksbr_com_c2(2) = Link([    0   -0.0838   0.08 0   ]);
 
 legbr_com_c2 = SerialLink(linksbr_com_c2, 'name', 'legbr_com_c2', 'offset', [0   0  0], 'base', Bbr);
 M_br_com_c2 = legbr_com_c2.fkine(q_rr(1:2));
-plot3(M_br_com_c2.t(1), M_br_com_c2.t(2), M_br_com_c2.t(3), '*g','MarkerSize',34)
+%plot3(M_br_com_c2.t(1), M_br_com_c2.t(2), M_br_com_c2.t(3), '*g','MarkerSize',34)
 
 linksbr_com_c3(1) = Link([    0   0   0       -pi/2 ]);
 linksbr_com_c3(2) = Link([    0   -0.0838   0.2 0   ]);
@@ -231,7 +231,7 @@ linksbr_com_c3(3) = Link([    0   0   0.1   0   ]);
 
 legbr_com_c3 = SerialLink(linksbr_com_c3, 'name', 'legbr_com_c3', 'offset', [0   0  0], 'base', Bbr);
 M_br_com_c3 = legbr_com_c3.fkine(q_rr);
-plot3(M_br_com_c3.t(1), M_br_com_c3.t(2), M_br_com_c3.t(3), '*g','MarkerSize',34)
+%plot3(M_br_com_c3.t(1), M_br_com_c3.t(2), M_br_com_c3.t(3), '*g','MarkerSize',34)
 
 %% bl
 
@@ -240,7 +240,7 @@ linksbl_com_c1(2) = Link([    0   0.04   0 0   ]);
 
 legbl_com_c1 = SerialLink(linksbl_com_c1, 'name', 'legbl_com_c1', 'offset', [0   0  0], 'base', Bbl);
 M_bl_com_c1 = legbl_com_c1.fkine(q_rl(1:2));
-plot3(M_bl_com_c1.t(1), M_bl_com_c1.t(2), M_bl_com_c1.t(3), '*g','MarkerSize',34)
+%plot3(M_bl_com_c1.t(1), M_bl_com_c1.t(2), M_bl_com_c1.t(3), '*g','MarkerSize',34)
 
 
 linksbl_com_c2(1) = Link([    0   0   0       -pi/2 ]);
@@ -248,7 +248,7 @@ linksbl_com_c2(2) = Link([    0   0.0838   0.08 0   ]);
 
 legbl_com_c2 = SerialLink(linksbl_com_c2, 'name', 'legbl_com_c2', 'offset', [0   0  0], 'base', Bbl);
 M_bl_com_c2 = legbl_com_c2.fkine(q_rl(1:2));
-plot3(M_bl_com_c2.t(1), M_bl_com_c2.t(2), M_bl_com_c2.t(3), '*g','MarkerSize',34)
+%plot3(M_bl_com_c2.t(1), M_bl_com_c2.t(2), M_bl_com_c2.t(3), '*g','MarkerSize',34)
 
 linksbl_com_c3(1) = Link([    0   0   0       -pi/2 ]);
 linksbl_com_c3(2) = Link([    0   0.0838   0.2 0   ]);
@@ -256,7 +256,7 @@ linksbl_com_c3(3) = Link([    0   0   0.1   0   ]);
 
 legbl_com_c3 = SerialLink(linksbl_com_c3, 'name', 'legbl_com_c3', 'offset', [0   0  0], 'base', Bbl);
 M_bl_com_c3 = legbl_com_c3.fkine(q_rl);
-plot3(M_bl_com_c3.t(1), M_bl_com_c3.t(2), M_bl_com_c3.t(3), '*g','MarkerSize',34)
+%plot3(M_bl_com_c3.t(1), M_bl_com_c3.t(2), M_bl_com_c3.t(3), '*g','MarkerSize',34)
 
 m1 = 0.696;
 m2 = 1.013;
@@ -265,26 +265,26 @@ mmat = [m1; m2; m3];
 
 cmat_hr = [M_hr_com_c1.t M_hr_com_c2.t M_hr_com_c3.t];
 c_hr = 1/(m1+m2+m3) *cmat_hr *mmat 
-plot3(c_hr(1),c_hr(2),c_hr(3),'*','Color','b','MarkerSize',32)
+%plot3(c_hr(1),c_hr(2),c_hr(3),'*','Color','b','MarkerSize',32)
 
 cmat_hl = [M_hl_com_c1.t M_hl_com_c2.t M_hl_com_c3.t];
 c_hl = 1/(m1+m2+m3) *cmat_hl *mmat ;
-plot3(c_hl(1),c_hl(2),c_hl(3),'*','Color','b','MarkerSize',32)
+%plot3(c_hl(1),c_hl(2),c_hl(3),'*','Color','b','MarkerSize',32)
 
 cmat_br = [M_br_com_c1.t M_br_com_c2.t M_br_com_c3.t];
 c_br = 1/(m1+m2+m3) *cmat_br *mmat ;
-plot3(c_br(1),c_br(2),c_br(3),'*','Color','b','MarkerSize',32)
+%plot3(c_br(1),c_br(2),c_br(3),'*','Color','b','MarkerSize',32)
 
 cmat_bl = [M_bl_com_c1.t M_bl_com_c2.t M_bl_com_c3.t];
 c_bl = 1/(m1+m2+m3) *cmat_bl *mmat ;
-plot3(c_bl(1),c_bl(2),c_bl(3),'*','Color','b','MarkerSize',32)
+%plot3(c_bl(1),c_bl(2),c_bl(3),'*','Color','b','MarkerSize',32)
 
 
 m_cl = [m1+m2+m3; m1+m2+m3; m1+m2+m3; m1+m2+m3];
 cmatl = [c_hr c_hl c_br c_bl];
 cl = 1/((m1+m2+m3)*4)*cmatl*m_cl
 
-plot3(cl(1),cl(2),cl(3),'*','Color','g','MarkerSize',20)
+%plot3(cl(1),cl(2),cl(3),'*','Color','g','MarkerSize',20)
 
 
 m_corp= 6;
@@ -297,7 +297,7 @@ cmat = [c_hr c_hl c_br c_bl c_corp];
 c = 1/(4*(m1+m2+m3)+m_corp)*cmat*m_c
 
 plot3(c(1),c(2),c(3),'*','Color','b','MarkerSize',20)
-plot3(c_corp(1),c_corp(2),c_corp(3),'*','Color','r','MarkerSize',20)
+%plot3(c_corp(1),c_corp(2),c_corp(3),'*','Color','r','MarkerSize',20)
 
 
 
