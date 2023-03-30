@@ -4,10 +4,9 @@
   
   Robotul se deplaseasa de alungul unei traiectori(o linie dreapta). Logica de coltrol este urmatoarea:
   
-  1. se calculeaza eroarea dintre centru corpului si primul punct din traiectorie
-  2. cu ajutorul ZMP(zero moment point) se calculeaza care este pozitia picioarelor astfel incat robotul sa ramana stabil(in programul Simulink a fost implementata doar o mica parte din ZMP)
-  3. In State Flow a fost implementata structura secventiala de deplasare a picioarelor si a corpului
-  4. prin intermediul Kinematici inverse se calculeaza care sunt valorile unghiulare din cuple pe baza pozitilor picioarelor si a corpului
+  1. cu ajutorul ZMP(zero moment point) se calculeaza care este pozitia picioarelor pe baza traiectoriei(in programul Simulink a fost implementata doar o mica parte din ZMP)
+  2. In State Flow a fost implementata structura secventiala de deplasare a picioarelor si a corpului
+  3. prin intermediul Kinematici inverse se calculeaza care sunt valorile unghiulare din cuple pe baza pozitilor picioarelor si a corpului
 
   Simulatorul din Simulink a fost implementat in totalitate in C++
 
