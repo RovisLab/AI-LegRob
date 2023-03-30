@@ -11,7 +11,8 @@
 
   Simulatorul din Simulink a fost implementat in totalitate in C++
   
-https://user-images.githubusercontent.com/57198584/228913159-8651c07b-aa2b-4663-9f34-0bbcca39fdd5.mp4 https://user-images.githubusercontent.com/57198584/228915002-56c92ba8-f171-468c-aa05-1577b0c1acf7.mp4
+https://user-images.githubusercontent.com/57198584/228913159-8651c07b-aa2b-4663-9f34-0bbcca39fdd5.mp4
+https://user-images.githubusercontent.com/57198584/228915002-56c92ba8-f171-468c-aa05-1577b0c1acf7.mp4
 
 
 
