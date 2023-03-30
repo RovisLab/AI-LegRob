@@ -4,9 +4,8 @@
 
   1. Problema de Kinematica inversa este rezolvata trigonometric.
   2. Metoda implemetata permite controlul picioarelor si a corpului(se poate modifica orientarea si translatia acestuia).
-  3. In cazul in care solutia este NaN sau inf. inseamna ca punctul care se dorete sa fie accesat nu este in sptiul de lucru al robotului.
+  3. In cazul in care solutia este NaN sau inf. inseamna ca punctul care se doreste sa fie atins nu este in sptiul de lucru al robotului.
   4. Aceasta problema mai poate fi imbunatatita prin eliminarea functiilor arcsin, arctg, etc.
-  5. Nu am atasat rezolvare deoarece trebuie sa o rescriu.
 
 https://user-images.githubusercontent.com/57198584/228921293-8061b913-397c-4f70-af76-c269255ac56c.mp4
 
