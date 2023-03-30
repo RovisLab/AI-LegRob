@@ -6,9 +6,13 @@
   2. Metoda implemetata permite controlul picioarelor si a corpului(se poate modifica orientarea si translatia acestuia).
   3. In cazul in care solutia este NaN sau inf. inseamna ca punctul care se dorete sa fie accesat nu este in sptiul de lucru al robotului.
   4. Aceasta problema mai poate fi imbunatatita prin eliminarea functiilor arcsin, arctg, etc.
-  5. Nu am atasat rezolvare deoarece trebuie sa o rescriu dar este implementarea facuta in code.
+  5. Nu am atasat rezolvare deoarece trebuie sa o rescriu.
  
 ![image](https://user-images.githubusercontent.com/57198584/228883457-657abb35-62ce-4050-9b4a-d36c7c0297be.png)
+
+https://user-images.githubusercontent.com/57198584/228896209-083498dc-f889-4cc0-9bc6-8e309b814f82.mp4
+
+
 
 ## Center of Mass:
 
