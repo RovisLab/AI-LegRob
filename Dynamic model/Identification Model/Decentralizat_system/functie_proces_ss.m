@@ -1,0 +1,36 @@
+function J = functie_proces_ss(xyz,u,out,n)
+
+    Ts = 0.01;
+    
+    a11 = xyz(1); a12 = xyz(2); a13 = xyz(3); a21 = xyz(4);
+    a22 = xyz(5); a23 = xyz(6); a31 = xyz(7); a32 = xyz(8); a33 = xyz(9);
+    
+    b11 = xyz(10); b12 = xyz(11); b13 = xyz(12);
+    b21 = xyz(13); b22 = xyz(14); b23 = xyz(15);
+    b31 = xyz(16); b32 = xyz(17); b33 = xyz(18);
+
+    c11 = xyz(19); c12 = xyz(20); c13 = xyz(21);
+    c21 = xyz(22); c22 = xyz(23); c23 = xyz(24);
+    c31 = xyz(25); c32 = xyz(26); c33 = xyz(27);
+
+    d11 = xyz(28); d12 = xyz(29); d13 = xyz(30);
+    d21 = xyz(31); d22 = xyz(32); d23 = xyz(33);
+    d31 = xyz(34); d32 = xyz(35); d33 = xyz(36);
+
+
+    A = [a11 a12 a13; a21 a22 a23; a31 a32 a33];
+    B = [b11 b12 b13; b21 b22 b23; b31 b32 b33];
+    C = [c11 c12 c13; c21 c22 c23; c31 c32 c33];
+    D = [d11 d12 d13; d21 d22 d23; d31 d32 d33];
+    
+%     C = eye(3,3);
+%     D = zeros(3,3);
+
+    sys = ss(A,B,C,D,Ts);
+
+    yy = lsim(sys, u');
+
+
+    J = 1/n*sum(sum((out'-yy).^2),2);
+
+end
