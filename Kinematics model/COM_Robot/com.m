@@ -282,7 +282,7 @@ c_bl = 1/(m1+m2+m3) *cmat_bl *mmat ;
 
 m_cl = [m1+m2+m3; m1+m2+m3; m1+m2+m3; m1+m2+m3];
 cmatl = [c_hr c_hl c_br c_bl];
-cl = 1/((m1+m2+m3)*4)*cmatl*m_cl
+cl = 1/((m1+m2+m3)*4)*cmatl*m_cl;
 
 %plot3(cl(1),cl(2),cl(3),'*','Color','g','MarkerSize',20)
 

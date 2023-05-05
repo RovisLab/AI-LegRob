@@ -33,19 +33,6 @@ function q_r = ikine_fr_f(pstar, Tx, Ty, Tz , Rx, Ry, Rz)
     x_ = pstar(1,4);
     y_ = pstar(2,4);
     z_ = pstar(3,4);
-
-
-%     d = sqrt((x_ - x0_)*(x_ - x0_) + (y_ - y0_)*(y_ - y0_) + (z_ - z0_)*(z_ - z0_));
-% 
-%     th = acos((z_ - z0_)/d) 
-%     fis = acos((x_ - x0_)/(d*sin(th)))% + Rz*2*pi/360
-% 
-%     star = [x0_; y0_; z0_] + rotx(Rx)*roty(-Ry)*rotz(Rz)*(d.*[cos(fis)*sin(th); sin(fis)*sin(th); cos(th)]) 
-%     
-%     x_ = star(1)
-%     y_ = star(2)
-%     z_ = star(3)
-
     
     off = 0.0838;
     L = 0.2;
