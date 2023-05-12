@@ -2,9 +2,9 @@
 
 ## Inverse kinematics:
 
-    1. The Inverse Kinematics problem is solved trigonometrically.
-    2. The implemented method allows control of the legs and the body (its orientation and translation can be changed).
-    3. If the solution is NaN or less. it means that the desired point is not in the robot's working space.
+1. The Inverse Kinematics problem is solved trigonometrically.
+2. The implemented method allows control of the legs and the body (its orientation and translation can be changed).
+3. If the solution is NaN or less. it means that the desired point is not in the robot's working space.
 
 https://user-images.githubusercontent.com/57198584/228921293-8061b913-397c-4f70-af76-c269255ac56c.mp4
 
