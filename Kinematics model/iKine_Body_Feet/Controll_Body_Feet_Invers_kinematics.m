@@ -89,64 +89,6 @@ pstar_hr = [x_hr; y_hr; z_hr];
 plot3(x_hr, y_hr, z_hr, '*r','MarkerSize',32)
 hold on
 
-% % pstar_hrr = [rotx(0), [(x_hr - Bhr(1,4)); (y_hr - Bhr(2,4)); (z_hr - Bhr(3,4))]; [0 0 0 1]]*[R_c_corp, [0; 0; 0]; [0 0 0 1] ];
-% pstar_hrr = [rotx(Rx)*roty(Ry)*rotz(Rz), [0; 0; 0]; [0 0 0 1] ]*[0 0 0 x_hr-Bhr(1,4); 0 0 0 y_hr-Bhr(2,4); 0 0 0 z_hr-Bhr(3,4); 0 0 0 1] + [0 0 0 Bhr(1,4); 0 0 0 Bhr(2,4); 0 0 0 Bhr(3,4); 0 0 0 1]
-% % %pstar_hrr = [R_c_corp, [0; 0; 0]; [0 0 0 1] ] * [(x_hr); (y_hr); (z_hr); 1];
-% plot3(pstar_hrr(1,4), pstar_hrr(2,4), pstar_hrr(3,4), '*r' ,'MarkerSize',42)
-% %%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% rc = sqrt((x_hr - Bhr(1,4))^2 + (y_hr - Bhr(2,4))^2 + (z_hr - Bhr(3,4))^2);
-% xc = Bhr(1,4);
-% yc = Bhr(2,4);
-% zc = Bhr(3,4);
-% fis=0:0.01/2:pi;
-% th=0:0.01:2*pi;
-% [th, fis] = meshgrid(th,fis);
-% rcp = rc .*ones(size(th));
-% 
-% xcp=xc + rcp.*cos(th).*sin(fis);
-% ycp=yc + rcp.*sin(th).*sin(fis);
-% zcp=zc + rcp.*cos(fis);
-% 
-% plot3(xcp, ycp, zcp, 'Color',[0.3, 0, 0, 0.2])
-% 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% r = sqrt((z_hr - Bhr(3,4))^2 + (y_hr - Bhr(2,4))^2);
-% y = Bhr(2,4);
-% z = Bhr(3,4);
-% ang=0:0.01:2*pi; 
-% zp= z + r*sin(ang);
-% yp= y + r*cos(ang);
-% xp = pstar_hr(1).*ones(1,length(ang));
-% 
-% plot3(xp, yp, zp , '.b')
-% 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% rr = sqrt((x_hr - Bhr(1,4))^2 + (y_hr - Bhr(2,4))^2);
-% xx = Bhr(1,4);
-% yy = Bhr(2,4);
-% ang=0:0.01:2*pi; 
-% xxp=xx + rr*sin(ang);
-% yyp=yy + rr*cos(ang);
-% zzp = pstar_hr(3).*ones(1,length(ang));
-% plot3(xxp, yyp, zzp , '.g')
-% 
-% %%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% rrr = sqrt((x_hr - Bhr(1,4))^2 + (z_hr - Bhr(3,4))^2);
-% xxx = Bhr(1,4);
-% zzz = Bhr(3,4);
-% ang=0:0.01:2*pi; 
-% xxxp=xxx + rrr*sin(ang);
-% zzzp=zzz + rrr*cos(ang);
-% yyyp = pstar_hr(2).*ones(1,length(ang));
-% plot3(xxxp, yyyp, zzzp , '.g')
-% 
-% 
-% %%%%%%%%%%%%%%%%%%%%%%%%%
-
 x_hl = 0.155677;
 y_hl = 0.130800;
 z_hl = -0.247402;
