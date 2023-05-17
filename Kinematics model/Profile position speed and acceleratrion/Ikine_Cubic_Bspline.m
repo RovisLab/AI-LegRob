@@ -76,9 +76,9 @@ legbl = SerialLink(linksbl, 'name', 'legbl', 'offset', [0   0  0], 'base', Bbl);
 % now create a robot to represent a single leg
 legbr = SerialLink(linksbr, 'name', 'legbr', 'offset', [0   0  0], 'base', Bbr);
 
-A = [0.1105, -0.1308, -0.15]'
-C = [0.1205, -0.1308, -0.10]'
-B = [0.1305, -0.1308, -0.15]'
+A = [0.1105, -0.1308, -0.15]';
+C = [0.1205, -0.1308, -0.10]';
+B = [0.1305, -0.1308, -0.15]';
 
 rx = 0;
 ry = 0;
@@ -88,7 +88,7 @@ ty = 0;
 tz = 0;
 
 nr_p = 20;
-traj = Parab(A, B, nr_p)
+traj = Parab(A, B, nr_p);
 
 t = [0, 0.5, 1]; % Assumed time stamp
 
@@ -102,7 +102,7 @@ xx = interp1(t,x,tt,'spline');
 yy = interp1(t,y,tt,'spline');
 zz = interp1(t,z,tt,'spline');
 
-traj = [xx; yy; zz]
+traj = [xx; yy; zz];
 
 
 
@@ -110,7 +110,7 @@ figure
 
 for i=1:length(traj(1,:))
 
-    Q(i,:) = ikine_fr_f(traj(:,i), tx, ty, tz, rx, ry, rz)
+    Q(i,:) = ikine_fr_f(traj(:,i), tx, ty, tz, rx, ry, rz);
     tp = linspace(0,1,length(traj));
 
 end
