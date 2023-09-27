@@ -141,6 +141,8 @@ p = fnval(f, u);
 v = fnval(d_f, u);
 a = fnval(dd_f, u);
 
+save("data.mat","u","p")
+
 for i =1:3
 
     % Plot the data and spline
